@@ -164,53 +164,48 @@ for i in range(1,6): \\nested for loop
         print('*',end='')
     print()
 
-def convert(s):
-    s=input('enter:')
+def convert(s):    # with argument with out return type
     out=''
     for i in s:
-        if 'A'<=i<='z':
-            out=out+chr(ord(i)+32)
+        if "A"<=i<="Z":
+            out+=chr(ord(i)+32)
+        else:
+            out+=i
+    print(out)
+print(convert(input("enter:")))
+
+def convert(s): # with argument with return
+    out=''
+    for i in s:
+        if "A"<=i<="Z":
+            out+=chr(ord(i)+32)
         else:
             out+=i
     
     return out
-print(convert(input('enter:')))
+print(convert(input("enter:")))
 
-
-def convert(s):
-    s=input('enter:')
+def convert(): #without argument with return
+    s=input("enter:")
     out=''
     for i in s:
-        if 'A'<=i<='z':
-            out=out+chr(ord(i)+32)
+        if "A"<=i<="Z":
+            out+=chr(ord(i)+32)
         else:
             out+=i
-    
-    print(out)
-print(convert(input('enter:')))
+    return out 
+print(convert())
 
-def convert():
-    s=input('enter:')
+def convert(): #without argument without return
+    s=input("enter:")
     out=''
     for i in s:
-        if 'A'<=i<='z':
-            out=out+chr(ord(i)+32)
+        if "A"<=i<="Z":
+            out+=chr(ord(i)+32)
         else:
             out+=i
-    
     print(out)
 convert()
 
-def convert():
-    s=input('enter:')
-    out=''
-    for i in s:
-        if 'A'<=i<='z':
-            out=out+chr(ord(i)+32)
-        else:
-            out+=i
-    return out
-    
-print(convert())
 
 
